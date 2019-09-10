@@ -11,7 +11,7 @@ var timer;
 
 
 
-var quizAuestions = [
+var quizQuestions = [
     {
 
         question: "",
@@ -34,3 +34,13 @@ var quizAuestions = [
 
 
 ];
+
+
+function loadChoices(choices) {
+    var result = '';
+
+    for (var i = 0; i <choices.length; i++){
+        
+    }
+
+}
