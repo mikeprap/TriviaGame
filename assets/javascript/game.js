@@ -14,8 +14,8 @@ var timer;
 var quizQuestions = [
     {
 
-        question: "",
-        choices: [],
+        question: "What is Philadelphia's football team called?",
+        choices: ["Eagles", "Panthers", "Falcons", "Chargers"],
         answer: "",
 
 
@@ -35,12 +35,28 @@ var quizQuestions = [
 
 ];
 
+function countDown() {
+
+    count--;
+    $('#time').html('timer:' + counter);
+}
+
+function loadQuestion(){
+    count = 30;
+    timer = setInterval(countDown, 1000);
+    var question = quizQuestions[currentQuestion].question;
+    var choices = quizQuestions[currentQuestion].choices;
+    $('#game').html('<h5>' + question + '</h4>');
+
+}
+
 
 function loadChoices(choices) {
     var result = '';
 
     for (var i = 0; i <choices.length; i++){
-        
+
     }
 
 }
+loadQuestion();
