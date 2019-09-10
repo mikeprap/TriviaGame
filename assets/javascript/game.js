@@ -46,7 +46,9 @@ function loadQuestion(){
     timer = setInterval(countDown, 1000);
     var question = quizQuestions[currentQuestion].question;
     var choices = quizQuestions[currentQuestion].choices;
+    $('#time').html('timer: ' + count);
     $('#game').html('<h5>' + question + '</h4>');
+    $
 
 }
 
