@@ -12,7 +12,7 @@ var timer;
 
 
 
-const quizQuestions = [
+var quizQuestions = [
     {
 
         question: "What is Philadelphia's football team called?",
@@ -41,6 +41,9 @@ function countDown() {
 
     count--;
     $('#time').html('timer:' + count);
+    if (count === 0){
+        timeUp();
+    }
 }
 
 function loadQuestion() {
@@ -55,9 +58,6 @@ function loadQuestion() {
     $('#game').html(`<h5>${question} </h5>
     ${loadChoices(choices)}
     `);
-
-
-
 
 
 
