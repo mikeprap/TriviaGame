@@ -54,8 +54,15 @@ function timeUp() {
 }
 
 function nextQuestion() {
+    // add something to stop the game after the last question
+    var lastQuestion = (quizQuestions.length - 1) === currentQuestion;
+    if (lastQuestion) {
+
+    }
+    else{
     currentQuestion++;
     loadQuestion();
+    }
 }
 
 function loadQuestion() {
@@ -85,4 +92,7 @@ function loadChoices(choices) {
     return result;
 
 }
+
+
+// need to create an on click function for the choices
 loadQuestion();
