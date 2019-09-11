@@ -96,11 +96,13 @@ function loadChoices(choices) {
 $(document).on("click", ".choice", function(){
     // create variables for the players guess and the correct answer
     var userGuess = $(this).attr('data-answer');
-    var rightAnswer = quizQuestions[currentQuestion].Answer;
+
+    var rightAnswer = quizQuestions[currentQuestion].answer;
     if (userGuess === rightAnswer) {
         score++;
-        console.log("test")
+        
         nextQuestion();
+        console.log("test")
     }
     else{
         losses++;
