@@ -57,7 +57,7 @@ function nextQuestion() {
     // add something to stop the game after the last question
     var lastQuestion = (quizQuestions.length - 1) === currentQuestion;
     if (lastQuestion) {
-
+        results();
     }
     else{
     currentQuestion++;
@@ -92,7 +92,7 @@ function loadChoices(choices) {
     return result;
 
 }
-
+// need to create an on click function for the choices
 $(document).on("click", ".choice", function(){
     // create variables for the players guess and the correct answer
     var userGuess = $(this).attr('data-answer');
@@ -111,6 +111,15 @@ $(document).on("click", ".choice", function(){
 
 });
 
+function results(){
 
-// need to create an on click function for the choices
+    var result = ("<p>you got " + [score] + " correct!</p>");
+
+    $("#game").html(result);
+
+
+
+}
+
+
 loadQuestion();
