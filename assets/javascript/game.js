@@ -93,6 +93,11 @@ function loadChoices(choices) {
 
 }
 
+$(document).on("click", ".choice", function(){
+
+    
+});
+
 
 // need to create an on click function for the choices
 loadQuestion();
