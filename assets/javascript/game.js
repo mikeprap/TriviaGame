@@ -97,6 +97,15 @@ $(document).on("click", ".choice", function(){
     // create variables for the players guess and the correct answer
     var userGuess = $(this).attr('data-answer');
     var rightAnswer = quizQuestions[currentQuestion].Answer;
+    if (userGuess === rightAnswer) {
+        score++;
+        console.log("test")
+        nextQuestion();
+    }
+    else{
+        losses++;
+        nextQuestion();
+    }
 
 });
 
