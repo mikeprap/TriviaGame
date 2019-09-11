@@ -56,7 +56,7 @@ var quizQuestions = [
 function countDown() {
 
     count--;
-    $('#time').html('timer:' + count);
+    $('#time').html('timer: ' + count);
     if (count === 0){
         timeUp();
     }
@@ -110,6 +110,7 @@ function loadChoices(choices) {
 }
 // need to create an on click function for the choices
 $(document).on("click", ".choice", function(){
+    clearInterval(timer)
     // create variables for the players guess and the correct answer
     var userGuess = $(this).attr('data-answer');
 
@@ -131,13 +132,20 @@ function results(){
     
 
     var result = ("<p>you got " + [score] + " correct!</p>");
-                 ("<p>you missed " + [losses] + " wrong</p>");
+    var loss =  ("<p>you missed " + [losses] + " questions</p>");
+    var total = ("<p>Out of " + [quizQuestions.length] + " total questions</p>");
 
-    $("#game").html(result);
 
+    $("#game").html(result + loss + total);
+    
 
 
 }
 
+$("#start").click(function() {
+    $("#start").remove();
+    $("#time").html(count);
+    loadQuestion();
 
-loadQuestion();
+});
+
