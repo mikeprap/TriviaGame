@@ -46,6 +46,12 @@ function countDown() {
     }
 }
 
+function timeUp() {
+    clearInterval(timer);
+    losses++;
+    
+}
+
 function loadQuestion() {
     count = 30;
     timer = setInterval(countDown, 1000);
