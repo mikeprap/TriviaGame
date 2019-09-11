@@ -22,9 +22,9 @@ var quizQuestions = [
 
     },
     {
-        question: "",
-        choices: [],
-        answer: "",
+        question: "What year was the first Super Bowl played?",
+        choices: ["1950", "1962", "1967", "1940"],
+        answer: "1967",
 
 
 
@@ -49,7 +49,13 @@ function countDown() {
 function timeUp() {
     clearInterval(timer);
     losses++;
+    nextQuestion();
     
+}
+
+function nextQuestion() {
+    currentQuestion++;
+    loadQuestion();
 }
 
 function loadQuestion() {
@@ -68,7 +74,7 @@ function loadQuestion() {
 
 
 }
-
+// load choices function with a for loop.
 
 function loadChoices(choices) {
     var result = '';
