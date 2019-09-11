@@ -28,7 +28,23 @@ var quizQuestions = [
 
 
 
-    }
+    },
+    {
+
+        question: "How many teams were in the NHL when it was founded?",
+        choices: ["10", "4", "16", "6"],
+        answer: "6",
+
+
+    },
+    {
+
+        question: "How many games do each team play in an MLB regular season?",
+        choices: ["150", "85", "162", "200"],
+        answer: "162",
+
+
+    },
 
 
 
@@ -112,8 +128,10 @@ $(document).on("click", ".choice", function(){
 });
 
 function results(){
+    
 
     var result = ("<p>you got " + [score] + " correct!</p>");
+                 ("<p>you missed " + [losses] + " wrong</p>");
 
     $("#game").html(result);
 
