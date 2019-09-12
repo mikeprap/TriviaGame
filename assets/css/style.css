@@ -2,7 +2,7 @@ h1 {
     text-align: center;
  }
 
- .btn {
+ button {
      text-align: center;
  }
 
@@ -22,6 +22,14 @@ h1 {
 
  #game {
      text-align: center
+ }
+ body {
+     background-image: url(http://www.seekgif.com/uploads/watch-live-all-sports-background-0.jpeg)
+ }
+
+ .jumbotron {
+
+    margin-top: 100px;
  }
 
 

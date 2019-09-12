@@ -144,12 +144,12 @@ function results(){
 
 }
 function inBetweenScreen(status) {
-    var rightAnswer = quizQuestions[currentQuestion].answer;
+     answer = quizQuestions[currentQuestion].answer;
    
         
     if (status === "win") {
         correct = ("<p>Correct!</p>");
-         theAnswer = ("<p>the answer is " [rightAnswer]);
+        theAnswer = ("<p>the answer is " [answer]);
        
        
         $("#game").html(correct + theAnswer);
@@ -158,7 +158,7 @@ function inBetweenScreen(status) {
     }
     else {
         wrong = ("<p>Wrong!</>");
-        theAnswer = ("<p>the answer is " [rightAnswer]);
+        theAnswer = ("<p>the answer is " [answer]);
         
         $("#game").html(wrong + theAnswer);
 
