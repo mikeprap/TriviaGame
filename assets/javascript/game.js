@@ -65,7 +65,8 @@ function countDown() {
 function timeUp() {
     clearInterval(timer);
     losses++;
-    nextQuestion();
+    inBetweenScreen("loss")
+    setTimeout(nextQuestion, 5 * 1000);
     
 }
 
@@ -117,13 +118,14 @@ $(document).on("click", ".choice", function(){
     var rightAnswer = quizQuestions[currentQuestion].answer;
     if (userGuess === rightAnswer) {
         score++;
-        
-        nextQuestion();
+        inBetweenScreen("win");
+        setTimeout(nextQuestion, 5 * 1000);
         console.log("test")
     }
     else{
         losses++;
-        nextQuestion();
+        inBetweenScreen("loss")
+        setTimeout(nextQuestion, 5 * 1000);
     }
 
 });
@@ -138,6 +140,29 @@ function results(){
 
     $("#game").html(result + loss + total);
     
+
+
+}
+function inBetweenScreen(status) {
+    var rightAnswer = quizQuestions[currentQuestion].answer;
+   
+        
+    if (status === "win") {
+        correct = ("<p>Correct!</p>");
+         theAnswer = ("<p>the answer is " [rightAnswer]);
+       
+       
+        $("#game").html(correct + theAnswer);
+
+        
+    }
+    else {
+        wrong = ("<p>Wrong!</>");
+        theAnswer = ("<p>the answer is " [rightAnswer]);
+        
+        $("#game").html(wrong + theAnswer);
+
+    }
 
 
 }
