@@ -149,7 +149,7 @@ function inBetweenScreen(status) {
         
     if (status === "win") {
         correct = ("<p>Correct!</p>");
-        theAnswer = ("<p>the answer is " [answer]);
+        theAnswer = ("<p>the answer is " + [answer]);
        
        
         $("#game").html(correct + theAnswer);
@@ -158,7 +158,7 @@ function inBetweenScreen(status) {
     }
     else {
         wrong = ("<p>Wrong!</>");
-        theAnswer = ("<p>the answer is " [answer]);
+        theAnswer = ("<p>the answer is " + [answer]);
         
         $("#game").html(wrong + theAnswer);
 
